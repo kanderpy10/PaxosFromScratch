@@ -1,9 +1,11 @@
 public class PromiseMsg{
     private Ballot promisedBallot;
     private int acceptorID;
-    public PromiseMsg(Ballot pb, int aID){
+    private int value; 
+    public PromiseMsg(Ballot pb, int aID, int v){
         this.promisedBallot = pb;
-        this.acceptorID = aID; 
+        this.acceptorID = aID;
+        this.value = v; 
     }
     public void setPromisedBallot(Ballot i){
         promisedBallot = i;
@@ -16,5 +18,11 @@ public class PromiseMsg{
     }
     public int getAcceptorId(){
         return acceptorID; 
+    }
+    public int getValue(){
+        return value;
+    }
+    public void setValue(int va){
+        this.value = va; 
     }
 }
